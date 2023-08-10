@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "my-project-woodline-pro",
+  "private_key_id": "af84f1d6ef86f83802b83596b77055e103809692",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAoTzVcNrR/rtr\nHR4cUvxG1nLwVfAwe67uZaS6JRAp4N8azJQcFpduFbMvyxyKoLxCoVvcwCQiQ1dT\ngy8q4FKLaB0wHqRxDXUhHNAt1jJjCHZsuz5Fqo633oYZ81t8Wp7AHD99fkFObfe5\nvmwjXGxT19nJTRvbC7drY7eu1xEFTpoHCqUj3D5VpVuV+XR6jxvUTUuyJYiVftr4\nCDTb06422Pqp4zPlUmS6DMf3wgkJ1EP+EMjW4GO47cTTVot61ZUFYOZ3qLSSob/2\ndkMvkssYTqAKBcuNBVRl7zVK/VAQVAMpcp2HvYfJkbrOAKbZTgAUSqPxa4Bmx2mt\nrUo06DRxAgMBAAECggEAEEpykSCCuQjAg+4J+l5ATKNdRBsYfZkwMaQx+rYguFH2\nvFb53ahBdUNrjIqyZrzyPvZThQdQ5v7n9z2ccxVWlcif0058HL2FHuBHcODxEPQJ\nw+dP/GdQu5cboz00Cv/E9j1NV0kir8XYEgLbNWBfHvYdyor1ZKCIihH8WlKA84BM\n/D+/BKHabHYXZLfqhR/0XV1iNub+7NLXIPFbmP6TdDJbzPgofwTjYt+XIOI2hG+x\nnyHz9lWDS2JayXOc6/qIkQLnIaDYc877OnSmP6RZRwrCGmoNyRPsW89aQxj0aQrh\nW1yEkn+DVTRFo0+VeAI2e+frX8NmnQdqFfl5jI058wKBgQD2x27k/j2k0XhIw8km\nmJJj2S2eU34oWiTwoNAchbQgbA0BWHpYNoEuxsK0ygNoXJ2RZkBCHlMu//fh3c4L\nbvXM+HLxfFx4aXgY14RN+QiBR7Qy8P1EsX65cGhXSD9cTCGH6XWGG2pAN97LT94d\nag5a/SCDmzoiNpeiFJYmjfJViwKBgQDH09b/hfOhVKujB8yeS41htYd7eRBe1Ni6\nbhst3fqVE85x8oRjWoFg0wcZ+DgtZ/2JYLVLMZb98pjPCacm8ceZg3NjmgyDoWUA\n3j2a8noUcvRNZ4vsiRe7jrONIwp2ko3ewIOYeSOBXTNqjuoJDJrGdMsOrymRWGR5\nurCTlsI1cwKBgQCYMomnO1IDa5kWr4FIh4KJiDEFW5MMCgSMT3HqlV9xO5KNyOaz\nrvHfSoBdBdYyMCSRvxFUdeVxsDZOHADutkFsZ7JkUwGo1ctW7txPRo7DRNjTLiPV\nkO6KKdSAODOzldR8QTTVP+U4s/x5QcnINFekMEc0Q7EH1smQEchFAPh7XwKBgQCO\nQgGNZ49KCz0lkyfYiXDdXp5VCJre6ChikIBI5v69opwWAtC86nGwvIsRseRMbvvQ\nEUj/fw4/O7YNrpGQ6A9w+mPrRIAkNYHyXET/SiAe7rd9Y3n5qp96ptysXYXVZAAb\n1HHa2mKsde1krtluF8sX/Y2RpqGxF3xwLLgIWgtogQKBgFBY5aT67vUyckG9d28m\nEBnWnUeCTNEoUCPdekLxDCwKQIkj/20LH7y+QU5xunP+j7CDLUs/2c1tmDUhApDp\nMOiTgvkloZjU6plt93WZ+beLD9c1YGekslrCueY5xKgqvi+XHox8Q9dMIQXzhsVx\nhOR101dS7gZps5xbMm6pVuxz\n-----END PRIVATE KEY-----\n",
+  "client_email": "woodline-bot@my-project-woodline-pro.iam.gserviceaccount.com",
+  "client_id": "101966320286915369359",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/woodline-bot%40my-project-woodline-pro.iam.gserviceaccount.com"
+}
