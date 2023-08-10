@@ -41,7 +41,7 @@ client.authorize(async function (err, tokens) {
     console.log(err);
     return;
   } else {
-    console.log("Connected!");
+    console.log("Connected!", tokens);
     const sheets = google.sheets({ version: "v4", auth: client });
     app.get("/sheet-data", async (_, res) => {
       const idArray = await getIds(

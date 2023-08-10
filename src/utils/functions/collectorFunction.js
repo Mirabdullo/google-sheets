@@ -3,7 +3,7 @@ const applyFunction = require("./applyFunction");
 const moment = require("moment");
 const DealModel = require("../../model/deal.model");
 const ApplyModel = require("../../model/apply.model");
-const { where } = require("sequelize");
+
 
 function collectorFunction(dealData, applyData, company_idData, gsapi) {
   company_idData.forEach(async (e) => {
