@@ -41,7 +41,7 @@ client.authorize(async function (err, tokens) {
     console.log(err);
     return;
   } else {
-    console.log("Connected!", tokens);
+    console.log("Connected!");
     const sheets = google.sheets({ version: "v4", auth: client });
     app.get("/sheet-data", async (_, res) => {
       const idArray = await getIds(
@@ -162,7 +162,7 @@ client.authorize(async function (err, tokens) {
           approvalFunction(
             sheets,
             approvals,
-            "Оплаты на Заяавку!A5:P",
+            "Оплаты на Заяавку!A1:P2",
             "1QP4zyQKa0rzpwYjz_oIt7_uJkpwL330sPPKVdePoJYs"
           );
           const approval_ids = approvals.map((approval) => approval?.id);
