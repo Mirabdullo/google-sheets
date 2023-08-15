@@ -11,10 +11,10 @@ function collectorFunction(dealData, applyData, company_idData, gsapi) {
     let applyArr = [];
     const company_id = e.company_id;
     const deals = dealData.filter(
-      (deal) => deal.seller.company_id == company_id
+      (deal) => deal.company_id == company_id
     );
     const applies = applyData.filter(
-      (apply) => apply.seller.company_id == company_id
+      (apply) => apply.company_id == company_id
     );
     if (deals.length) {
       deals.forEach((deal, dealIndex) => {

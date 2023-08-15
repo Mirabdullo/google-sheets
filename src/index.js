@@ -66,7 +66,7 @@ client.authorize(async function (err, tokens) {
     });
     setInterval(async () => {
       try {
-        const sendData = await SellerModel.findAll({
+        const sendData = await CompanyModel.findAll({
           attributes: [
             "company_id",
             [sequelize.fn("count", sequelize.col("*")), "count"],
