@@ -30,7 +30,7 @@ const approvalFunction = require("./utils/functions/approvalFunction");
 
 const cron = require('node-cron');
 const scheduledFunctions = require("./utils/scheduledFunctions");
-const CREATED_PRODUCT_WRITE_EXCEL = require("./utils/functions/createWarehouseProduct");
+const { CREATED_PRODUCT_WRITE_EXCEL } = require("./utils/functions/createWarehouseProduct");
 
 
 const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
@@ -46,7 +46,7 @@ client.authorize(async function (err, tokens) {
     const sheets = google.sheets({ version: "v4", auth: client });
     cron.schedule("* * * * *", async () => {
       try {
-        await CREATED_PRODUCT_WRITE_EXCEL();
+        await CREATED_PRODUCT_WRITE_EXCEL()
       } catch (error) {
         console.error("Error executing scheduled function:", error);
       }
