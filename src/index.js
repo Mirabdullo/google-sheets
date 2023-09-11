@@ -31,6 +31,7 @@ const approvalFunction = require("./utils/functions/approvalFunction");
 const cron = require('node-cron');
 const scheduledFunctions = require("./utils/scheduledFunctions");
 const { CREATED_PRODUCT_WRITE_EXCEL } = require("./utils/functions/createWarehouseProduct");
+const CHANGES_PRODUCT_WRITE_EXCEL = require("./utils/functions/changesOrder");
 
 
 const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
@@ -238,6 +239,8 @@ app.use(router);
 
 cron.schedule('* * * * *', async () => {
   await scheduledFunctions.ACTIVATE_BOOKED_ORDER()
+
+  await CHANGES_PRODUCT_WRITE_EXCEL()
 })
 
 app.listen(PORT, console.log(`Server is listening on port ${PORT}`));
