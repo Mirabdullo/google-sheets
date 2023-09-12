@@ -18,7 +18,7 @@ async function CHANGES_PRODUCT_WRITE_EXCEL() {
 
         const prod = await Orders.findAll({
             where: { 
-                edited_status: {[Op.or]: ["add", "change", "remove"]}
+                edited_status: {[Op.or]: ["add", "edited", "deleted"]}
              },
             attributes: ["id", "order_id", "cathegory", "tissue", "title", "cost", "sale", "qty", "sum", "status", "edited_status"],
             include: [
@@ -38,24 +38,27 @@ async function CHANGES_PRODUCT_WRITE_EXCEL() {
                 },
                 {
                     model: Model,
+                    paranoid: false,
                     attributes: ["id", "name"],
                     include: {
+                        paranoid: false,
                         model: FurnitureType,
                         attributes: ["id", "name"],
                     },
                 },
             ],
         });
-
+        
         if (prod.length > 0) {
-            const companies = prod.map((company) => company.deal.company_id)
-
+            let companies = prod.map((company) => company.deal.dataValues.company_id)
+            let ar = new Set(companies)
+            companies = [...ar]
 
             companies.forEach(async (company) => {
                 const comp = await Companies.findByPk(company);
                 let array = [];
-                prod.forEach((prod) => {
-                    if (prod.deal.company_id == comp.id) {
+                prod.forEach(async (prod) => {
+                    if (prod.deal.dataValues.company_id == comp.id) {
                         let status = prod.edited_status === "add" ? "продукт добавлена" : prod.edited_status == "edited" ? "продукт изменён" : "продукт удалена"
                         array.push([
                             format(new Date(), "yyyy-MM-dd"),
@@ -79,11 +82,11 @@ async function CHANGES_PRODUCT_WRITE_EXCEL() {
                             prod.deal.rest,
                             prod.deal.deal_id,
                         ]);
-
-                        prod.edited_status = "finished";
-                        prod.save();
+                        prod.edited_status = "copied";
+                        await prod.save();
                     }
                 })
+                
                 const opt = {
                     spreadsheetId: comp.company_id,
                     range: "изменения!A3:M",
@@ -96,10 +99,10 @@ async function CHANGES_PRODUCT_WRITE_EXCEL() {
         
                 await gsapi.spreadsheets.values.append(opt);
         
-                console.log("Warehouse product copied successfully");
             })
-            console.log("Warehouse product copied successfully");
+                console.log("changed");
         }
+        console.log("changed data not found");
     } catch (error) {
         console.log("excelga yozish:", error);
     }
